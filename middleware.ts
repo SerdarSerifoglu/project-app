@@ -9,7 +9,7 @@ const verifyJWT = async (jwt) => {
     new TextEncoder().encode(process.env.JWT_SECRET)
   );
 
-  return payload;
+  return payload.payload;
 };
 
 export default async function middleware(req, res) {
